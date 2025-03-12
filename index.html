@@ -372,9 +372,11 @@
                         where $i_k$ ($\textit{resp}$ $j_k$) denotes the index of the $k$-th nearest neighbor in $\mathcal{X}_2$ ($\textit{resp}$ $\mathcal{X}_1$) for $x_{1,i}$ (\resp $x_{2,j}$), leading to an unordered set of $K(|\mathcal{X}_1| + |\mathcal{X}_2|)$ values.</p>
                       <p>
                         $\textbf{Probabilistic Modeling}$ To compute GPS, we introduce the Gumbel distributions and distributional signatures as latent variables, as shown in, and propose a probabilistic framework as follows:
-                        \begin{equation}
-                          p(\mathcal{P}_1=\mathcal{P}_2 \mid \mathcal{X}_1, \mathcal{X}_2) = \sum_{q\in\mathcal{Q}}\sum_{d_{min}\in\mathcal{D}}  p(\mathcal{P}_1=\mathcal{P}_2, q, d_{min} \mid \mathcal{X}_1, \mathcal{X}_2) = \sum_{q\in\mathcal{Q}}\sum_{d_{min}\in\mathcal{D}} p(q)p(\mathcal{P}_1=\mathcal{P}_2 \mid q) p(d_{min} \mid q, \mathcal{X}_1, \mathcal{X}_2),
-                        \end{equatioin}
+                        \begin{equation}\label{eqn:p}
+                          p(\mathcal{P}_1=\mathcal{P}_2 \mid \mathcal{X}_1, \mathcal{X}_2) 
+                          = \sum_{q\in\mathcal{Q}}\sum_{d_{min}\in\mathcal{D}}  p(\mathcal{P}_1=\mathcal{P}_2, q, d_{min} \mid \mathcal{X}_1, \mathcal{X}_2) \\ 
+                          = \sum_{q\in\mathcal{Q}}\sum_{d_{min}\in\mathcal{D}} p(q)p(\mathcal{P}_1=\mathcal{P}_2 \mid q) p(d_{min} \mid q, \mathcal{X}_1, \mathcal{X}_2),
+                        \end{equation}
                         </p>
                     </div>
                 </div>
