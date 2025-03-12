@@ -400,8 +400,7 @@
                         (but they can be different). Note that here we take $p(q)$ and $p(\mathcal{P}_1=\mathcal{P}_2 \mid q)$ as two constants with no prior knowledge. </p>
                       <p>
                         $\textbf{Reparametrization with Minimum Euclidean Distances}$ The KNN distances are sets of (conditional) minima, not maxima. Therefore, we need to convert these minimum distances to some form of maximum values that can be modeled using Gumbel. 
-                        Considering both computational complexity and learning objectives, we propose reparametrizing $x \stackrel{def}{=} -\log (d_{min} + \delta)$, where $\delta\geq0$ denotes a distance shift (see \Cref{ssec:analysis} for more discussions), 
-                        and write as follows, which formally defines our GPS:
+                        Considering both computational complexity and learning objectives, we propose reparametrizing $x \stackrel{def}{=} -\log (d_{min} + \delta)$, where $\delta\geq0$ denotes a distance shift, and write as follows, which formally defines our GPS:
                         \begin{align}
                           & \hspace{-1mm}\kappa(\mathcal{X}_1, \mathcal{X}_2) \nonumber \\ 
                           & \hspace{-1mm}\stackrel{def}{=} \sum_{k,m}\left[\sum_i D_{min}^{(k,m)}(x_{1,i})\exp\{- D_{min}^{(k,m)}(x_{1,i})\} + \sum_j D_{min}^{(k,m)}(x_{2,j})\exp\{- D_{min}^{(k,m)}(x_{2,j})\}\right],
