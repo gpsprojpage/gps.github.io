@@ -402,7 +402,7 @@
                           $\textbf{Reparametrization with Minimum Euclidean Distances}$ The KNN distances are sets of (conditional) minima, not maxima. Therefore, we need to convert these minimum distances to some form of maximum values that can be modeled using Gumbel. 
                           Considering both computational complexity and learning objectives, we propose reparametrizing $x \stackrel{def}{=} -\log (d_{min} + \delta)$ in \Cref{eqn:pdf}, where $\delta\geq0$ denotes a distance shift (see \Cref{ssec:analysis} for more discussions), 
                           and rewrite \Cref{eqn:p2} accordingly as follows, which formally defines our GPS:
-                          \begin{equation}\label{eqn:gps}
+                          \begin{equation}
                             \kappa(\mathcal{X}_1, \mathcal{X}_2) &\stackrel{def}{=} \sum_{k,m}\left[\sum_i D_{min}^{(k,m)}(x_{1,i})\exp\{- D_{min}^{(k,m)}(x_{1,i})\} + \sum_j D_{min}^{(k,m)}(x_{2,j})\exp\{- D_{min}^{(k,m)}(x_{2,j})\}\right],
                           \end{equation}
                           where $\mu_{k,m} = \frac{\log\alpha_{k,m}}{\beta_{k,m}}$, $\sigma_{k,m} = \frac{1}{\beta_{k,m}} > 0$, $\alpha_{k,m} = e^{\frac{\mu_{k,m}}{\sigma_{k,m}}} > 0$, $\beta_{k,m} = \frac{1}{\sigma_{k,m}} > 0$, $D_{min}^{(k,m)}(x_{1,i}) = \alpha_{k,m}\Big[d_{min}^{(k,m)}(x_{1,i}) +\delta_{k,m} \Big]^{\beta_{k,m}}$, $D_{min}^{(k,m)}(x_{2,j}) = \alpha_{k,m}\Big[d_{min}^{(k,m)}(x_{2,j}) + \delta_{k,m}\Big]^{\beta_{k,m}}$, respectively.
