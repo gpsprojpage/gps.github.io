@@ -370,7 +370,8 @@
                         \begin{equation} 
                         p(x) = \frac{1}{\sigma}\exp\{-(y + \exp\{-y\})\}, \; \text{where} \; y = \frac{x - \mu}{\sigma}. 
                         \end{equation}</p>
-                      <p>$\textbf{Distributional Signatures}$ Given two sets of points $\mathcal{X}_1, \mathcal{X}_2$, we define the set of Euclidean distances from each point in one set to its KNNs in the other set as their distributional signature:
+                      <p>
+                        $\textbf{Distributional Signatures}$ Given two sets of points $\mathcal{X}_1, \mathcal{X}_2$, we define the set of Euclidean distances from each point in one set to its KNNs in the other set as their distributional signature:
                         \begin{equation}
                             \mathcal{D}(\mathcal{X}_1, \mathcal{X}_2) = \left\{d_{min}^{(k)}(x_{1,i}) = \|x_{1,i} - x_{2,i_k}\|, d_{min}^{(k)}(x_{2,j}) = \|x_{2,j} - x_{1,j_k}\| \mid \forall k\in[K], \forall i, \forall j \right\}
                         \end{equation}
