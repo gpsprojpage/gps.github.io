@@ -39,6 +39,8 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -307,7 +309,7 @@
                   <h2 class="title is-3">Introduction</h2>
                   <div class="content has-text-justified">
                       <p>
-                        <strong>Problem Statement</strong> Set-to-set matching involves comparing and identifying correspondences between two sets of items, which can be modeled as a bipartite graph matching problem. In this framework, the items
+                        $\textbf{Problem Statement}$ Set-to-set matching involves comparing and identifying correspondences between two sets of items, which can be modeled as a bipartite graph matching problem. In this framework, the items
                         in each set are represented as nodes on opposite sides of a bipartite graph, with the edges representing the correspondences. This task is challenging due to several factors: 
                         (1) The matching process must be invariant to the order of both the sets and the items within them; (2) Finding effective representations for each set is critical, as it greatly influences 
                         performance; (3) Computing a meaningful similarity score between sets, often used as a loss function for learning feature extractors, is a nontrivial problem. 
@@ -316,10 +318,10 @@
                         <img src="" alt="" style="width: 70%"></img>
                       </p>
                       <p>
-                        <strong>Limitations of Traditional Distance Metrics</strong> Existing metrics fail to adequately capture the similarity between sets in terms of their underlying distributions. In many real-world 
+                        $\textbf{Limitations of Traditional Distance Metrics}$ Existing metrics fail to adequately capture the similarity between sets in terms of their underlying distributions. In many real-world 
                         applications, such as classification, the primary concern is not the direct similarity between individual data instances but rather their similarity in some (latent) space, such as class labels.
-                        For instance, in \Cref{fig:distr_example} in the context of Chamfer Distance (CD), the distance between the sets $\circ$ and $\times$ is larger than that between the sets $\circ$ and $+$, despite 
-                        $\circ$ and $\times$ being sampled from the same underlying distribution. This highlights a critical issue: when asking \emph{``how likely are two sets of points to come from the same distribution?''} 
+                        For instance, in Figure 1 in the context of Chamfer Distance (CD), the distance between the sets &circ; and &times; is larger than that between the sets &circ; and &plus;, despite 
+                        &circ; and &times; being sampled from the same underlying distribution. This highlights a critical issue: when asking \emph{``how likely are two sets of points to come from the same distribution?''} 
                         CD and similar metrics may fail to reflect distributional similarity accurately. Consequently, traditional distance metrics are effective at measuring differences in observations (\eg point clouds or images) 
                         but may struggle to capture deeper, potentially unknown \emph{abstractions} such as distributions or class labels.
                         </p>
