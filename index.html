@@ -367,14 +367,13 @@
                         \end{equation}</p>
                       <p>$\textbf{Distributional Signatures}$ Given two sets of points $\mathcal{X}_1, \mathcal{X}_2$, we define the set of Euclidean distances from each point in one set to its KNNs in the other set as their distributional signature:
                         \begin{equation}
-                            \hspace{-2mm} \mathcal{D}(\mathcal{X}_1, \mathcal{X}_2) = \left\{d_{min}^{(k)}(x_{1,i}) = \|x_{1,i} - x_{2,i_k}\|, d_{min}^{(k)}(x_{2,j}) = \|x_{2,j} - x_{1,j_k}\| \mid \forall k\in[K], \forall i, \forall j \right\}
+                            \mathcal{D}(\mathcal{X}_1, \mathcal{X}_2) = \left\{d_{min}^{(k)}(x_{1,i}) = \|x_{1,i} - x_{2,i_k}\|, d_{min}^{(k)}(x_{2,j}) = \|x_{2,j} - x_{1,j_k}\| \mid \forall k\in[K], \forall i, \forall j \right\}
                         \end{equation}
                         where $i_k$ ($\textit{resp}$ $j_k$) denotes the index of the $k$-th nearest neighbor in $\mathcal{X}_2$ ($\textit{resp}$ $\mathcal{X}_1$) for $x_{1,i}$ (\resp $x_{2,j}$), leading to an unordered set of $K(|\mathcal{X}_1| + |\mathcal{X}_2|)$ values.</p>
                       <p>
                         $\textbf{Probabilistic Modeling}$ To compute GPS, we introduce the Gumbel distributions and distributional signatures as latent variables, as shown in, and propose a probabilistic framework as follows:
                         \begin{equation}
-                        p(\mathcal{P}_1=\mathcal{P}_2 \mid \mathcal{X}_1, \mathcal{X}_2) 
-                        & = \sum_{q\in\mathcal{Q}}\sum_{d_{min}\in\mathcal{D}}  p(\mathcal{P}_1=\mathcal{P}_2, q, d_{min} \mid \mathcal{X}_1, \mathcal{X}_2) \nonumber \\ 
+                        p(\mathcal{P}_1=\mathcal{P}_2 \mid \mathcal{X}_1, \mathcal{X}_2) = \sum_{q\in\mathcal{Q}}\sum_{d_{min}\in\mathcal{D}}  p(\mathcal{P}_1=\mathcal{P}_2, q, d_{min} \mid \mathcal{X}_1, \mathcal{X}_2) \nonumber \\ 
                         & = \sum_{q\in\mathcal{Q}}\sum_{d_{min}\in\mathcal{D}} p(q)p(\mathcal{P}_1=\mathcal{P}_2 \mid q) p(d_{min} \mid q, \mathcal{X}_1, \mathcal{X}_2),
                         \end{equatioin}
                         where $q\in\mathcal{Q}$ denotes a Gumbel distribution. Figure 3 illustrates the probability decomposition where a Gumbel distribution $q$ is selected for measuring set-to-set similarity based on the distributional signatures between sets. Note that 
